@@ -23,3 +23,8 @@ minikube start --driver=docker
 Verify Minikube Installation:
 minikube status
 kubectl get po -A 
+
+kubectl get nodes (to check how much nodes are connected in minikube)
+kubectl get pods (to check how much pods are created in Nodes)
+vi <podname> (to create pods and container in nodes)
+kubectl apply -f pod name (to apply/create changes in pods) 
