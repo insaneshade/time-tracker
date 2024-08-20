@@ -1,0 +1,23 @@
+Update your system:
+sudo apt update
+sudo apt upgrade -y
+
+Add the Ansible PPA repository:
+sudo apt install software-properties-common
+sudo add-apt-repository --yes --update ppa:ansible/ansible
+
+Install Ansible:
+sudo apt install ansible -y
+
+Verify the installation:
+ansible --version
+
+Set up SSH keys (if you haven’t already):
+ssh-keygen
+ssh-copy-id username@remote_host
+
+Create an inventory file:
+sudo nano /etc/ansible/hosts
+Add your managed nodes to this file.
+Test the setup:
+ansible all -m ping
